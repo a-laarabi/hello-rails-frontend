@@ -4,11 +4,11 @@ import axios from 'axios';
 const BASE_URL = 'http://localhost:3000/api/v1/messages';
 
 export const fetchMessages = createAsyncThunk(
-  "messages/fetchMessages",
+  'messages/fetchMessages',
   async () => {
     const response = await axios.get(BASE_URL);
     return response.data;
-  }
+  },
 );
 
 const messageReducer = createSlice({
